@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PennyLink — Shared budgeting made simple</title>
+  <meta name="description" content="PennyLink is a simple, powerful budgeting app for families and couples. Share budgets with up to 5 people, set permissions, and teach great money habits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="PennyLink — Shared budgeting made simple" />
+  <meta property="og:description" content="Share budgets with up to 5 people. Privacy-friendly totals. Allowances for kids. Manual-first to build real habits." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+  <header class="container header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="PennyLink logo" class="logo" />
+      <span class="brand-name">PennyLink</span>
+    </div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a class="btn small" href="#waitlist">Join waitlist</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <h1>Shared budgeting made simple.</h1>
+        <p class="lead">Real-time budgets for families and couples. Invite up to 5 people, set what each person can see, and build better money habits—together.</p>
+        <a class="btn" href="#waitlist">Get early access</a>
+        <div class="trust">
+          <div class="trust-item">✔ Privacy-first: share categories, not bank totals</div>
+          <div class="trust-item">✔ Allowances for kids with gentle coaching</div>
+          <div class="trust-item">✔ Manual-first for real habit building</div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/hero-illustration.svg" alt="PennyLink app preview illustration">
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <div class="feature">
+        <h3>Share with up to 5 people</h3>
+        <p>Invite family members or a partner with a link. Collaborate in real time on a shared budget.</p>
+      </div>
+      <div class="feature">
+        <h3>Granular permissions</h3>
+        <p>Choose what each person can see: categories only, contribute transactions, or view totals (opt-in).</p>
+      </div>
+      <div class="feature">
+        <h3>Allowance mode</h3>
+        <p>Give kids allowances, track spending, and reward healthy habits with badges and streaks.</p>
+      </div>
+      <div class="feature">
+        <h3>Simple insights</h3>
+        <p>One clean dashboard with your top categories and a single suggestion to stay on track.</p>
+      </div>
+    </section>
+
+    <section id="waitlist" class="waitlist container">
+      <h2>Be first to try PennyLink</h2>
+      <p>Join the waitlist and we’ll email you when the beta is ready.</p>
+      <!-- Replace this form action with your email provider embed (Mailchimp/ConvertKit/etc.) -->
+      <form class="waitlist-form" method="post" action="#" onsubmit="return fakeSubmit(event)">
+        <input type="email" name="email" placeholder="you@email.com" aria-label="Email address" required />
+        <button type="submit" class="btn">Join the waitlist</button>
+      </form>
+      <p class="form-note">No spam. One-click unsubscribe.</p>
+      <div id="thanks" class="thanks" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="privacy" class="privacy container">
+      <h2>Privacy, by design</h2>
+      <p>PennyLink is built to respect your choices. You can share category-level spending without revealing account totals. We only collect what’s necessary to operate the service. Learn more in our <a href="privacy.html">Privacy Policy</a>.</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>© <span id="year"></span> PennyLink</div>
+    <a href="privacy.html">Privacy</a>
+    <a href="mailto:hello@pennylink.app">Contact</a>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function fakeSubmit(e){
+      e.preventDefault();
+      const box = document.getElementById('thanks');
+      box.textContent = "Thanks! You’re on the list — we’ll reach out soon.";
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
